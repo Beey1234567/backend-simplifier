@@ -13,3 +13,7 @@ README.md improvements
 ## 2.0.0
 
 types.d.ts rework
+
+## 2.1.0
+
+now you can pass res as null in Query function
