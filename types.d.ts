@@ -36,7 +36,7 @@ export interface PackageWrapper {
      * Querys your database to run SQL
      * SqlParams - the Parameters for your SQL table or database
      */
-    Query(res: Response, sqlConnection: Stream.Duplex | null | undefined, sql: string, FailErrorMessage: string, FailResStatus: number, SuccessMessage: string, SuccessResStatus: number, SqlParams: any[]): Response | void,
+    Query(res: Response | null, sqlConnection: Stream.Duplex | null | undefined, sql: string, FailErrorMessage: string, FailResStatus: number, SuccessMessage: string, SuccessResStatus: number, SqlParams: any[]): Response | void,
     /**
      * Makes the server listen to incoming requests
      */
