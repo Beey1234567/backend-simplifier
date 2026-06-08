@@ -39,6 +39,17 @@ export function ExpressErrorJson(ErrorMessage, resStatus) {
     });
 }
 
+export function ExpressSuccessJson(Message, resStatus) {
+    return res.status(resStatus).json({
+        success: true,
+        message: Message
+    });
+}
+
+export function Send(res, message) {
+    res.send(message);
+}
+
 export function Query(sqlConnection, sql, FailErrorMessage, FailResStatus, SuccessMessage, SuccessResStatus, ...SqlParams) {
     const SQL = sql;
 
@@ -50,4 +61,70 @@ export function Query(sqlConnection, sql, FailErrorMessage, FailResStatus, Succe
 
         res.status(SuccessResStatus).json({ success: true, message: SuccessMessage, newId: results.insertId });
     });
+}
+
+export function Listen(app, port, successListenFunction) {
+    app.listen(port,() => {
+        successListenFunction()
+    });
+}
+
+export function Get(App, name, SuccessFunc, ErrorFunc) {
+    App.get(name, async (req, res) => {
+        try {
+            await SuccessFunc(req, res)
+        } catch (err) {
+            ErrorFunc(err, req, res)
+        }
+    });
+}
+
+export function Post(App, name, SuccessFunc, ErrorFunc) {
+    App.post(name, async (req, res) => {
+        try {
+            await SuccessFunc(req, res)
+        } catch (err) {
+            ErrorFunc(err, req, res)
+        }
+    });
+}
+
+export function Patch(App, name, SuccessFunc, ErrorFunc) {
+    App.patch(name, async (req, res) => {
+        try {
+            await SuccessFunc(req, res)
+        } catch (err) {
+            ErrorFunc(err, req, res)
+        }
+    });
+}
+
+export function Put(App, name, SuccessFunc, ErrorFunc) {
+    App.put(name, async (req, res) => {
+        try {
+            await SuccessFunc(req, res)
+        } catch (err) {
+            ErrorFunc(err, req, res)
+        }
+    });
+}
+
+export function Delete(App, name, SuccessFunc, ErrorFunc) {
+    App.delete(name, async (req, res) => {
+        try {
+            await SuccessFunc(req, res)
+        } catch (err) {
+            ErrorFunc(err, req, res)
+        }
+    });
+}
+
+export function CompareSync(Data, encrypted) {
+    return bcrypt.compareSync(Data, encrypted);
+}
+
+export function Compare(Data, encrypted) {
+    const result = await bcrypt.compare(Data, encrypted);
+    
+    return result;
 }
