@@ -39,7 +39,7 @@ export function ExpressErrorJson(ErrorMessage, resStatus) {
     });
 }
 
-export function Query(sqlConnection, sql, SqlParams, FailErrorMessage, FailResStatus, SuccessMessage, SuccessResStatus) {
+export function Query(sqlConnection, sql, FailErrorMessage, FailResStatus, SuccessMessage, SuccessResStatus, ...SqlParams) {
     const SQL = sql;
 
     sqlConnection.query(sql, SqlParams, (err, results) => {
