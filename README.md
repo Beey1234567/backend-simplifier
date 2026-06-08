@@ -21,4 +21,4 @@ This package has types.d.ts and you can import all functions with: `import "back
 
 ## Links
 
-Repository:
+Repository: [backend-simplifier](https://github.com/Beey1234567/backend-simplifier)
