@@ -23,3 +23,7 @@ types.d.ts changes
 ## 2.1.1
 
 types.d.ts Query function types have had very minor changes
+
+## 2.1.2
+
+Fixed CJS importing bug regarding package.json
