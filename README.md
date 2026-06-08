@@ -17,7 +17,7 @@ The package can't be used without these packages
 
 ## Importing
 
-This package has types.d.ts and you can import all functions with: `import "backend-simplifier"
+This package has types.d.ts and you can import all functions with: `import "backend-simplifier"`
 
 ## Links
 
