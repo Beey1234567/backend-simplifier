@@ -33,3 +33,9 @@ Fixed CJS importing bug regarding package.json
 Fixed another CJS importing bug regarding package.json
 
 reworked package.json with minor updates
+
+## 2.2.1
+
+Fixed yet another CJS importing bug regarding package.json
+
+Fixed an UPDATELOG.md markdown error
