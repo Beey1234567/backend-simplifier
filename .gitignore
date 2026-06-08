@@ -1,0 +1,21 @@
+# OS Junk
+
+.DS_Store
+
+# NPM Logs
+
+npm_debug.log*
+
+# NPM Folders
+
+Node_modules/
+
+# VS code configuration
+
+.vscode
+
+# Critical files
+
+.env
+
+.env.local

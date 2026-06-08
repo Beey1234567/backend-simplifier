@@ -1,0 +1,38 @@
+{
+    "name": "backend-simplifier",
+    "version": "1.0.0",
+    "private": false,
+    "description": "Makes backend easier to use",
+    "keywords": [
+        "Express",
+        "express",
+        "router",
+        "async",
+        "wrapper",
+        "boilerplate",
+        "code",
+        "web",
+        "backend"
+    ],
+    "main": "./index.js",
+    "types": "./types.d.ts",
+    "exports": {
+        ".": {
+            "types": "./index.d.ts",
+            "import": "./index.js"
+        },
+        "./async": {
+            "types": "./async-features.d.ts",
+            "import": "./async-features.js"
+        }
+    },
+    "peerDependencies": {
+        "express": ">=5.0.0",
+        "mysql2": ">=3.0.0",
+        "bcrypt": ">=6.0.0",
+        "cors": ">=2.0.0"
+    },
+    "type": "module",
+    "author": "beey12345",
+    "license": "MIT"
+}
