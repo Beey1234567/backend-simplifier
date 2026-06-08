@@ -22,11 +22,11 @@ export interface PackageWrapper {
     /**
      * Makes an express error for JSON
      */
-    ExpressErrorJson(ErrorMessage: string, resStatus: number): Response
+    ExpressErrorJson(res: Response, ErrorMessage: string, resStatus: number): Response
     /**
      * Makes an express success for JSON
      */
-    ExpressSuccessJson(Message: string, resStatus: number): Response
+    ExpressSuccessJson(res: Response, Message: string, resStatus: number): Response
 
     /**
      * Uses request's built-in send to send a message to the HTML.
@@ -36,7 +36,7 @@ export interface PackageWrapper {
      * Querys your database to run SQL
      * SqlParams - the Parameters for your SQL table or database
      */
-    Query(sqlConnection: Stream.Duplex | null | undefined, sql: string, FailErrorMessage: string, FailResStatus: number, SuccessMessage: string, SuccessResStatus: number, SqlParams: any[]): Response | void,
+    Query(res: Response, sqlConnection: Stream.Duplex | null | undefined, sql: string, FailErrorMessage: string, FailResStatus: number, SuccessMessage: string, SuccessResStatus: number, SqlParams: any[]): Response | void,
     /**
      * Makes the server listen to incoming requests
      */

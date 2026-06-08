@@ -28,18 +28,18 @@ export function HashSync(Data, SaltOrRounds) {
 }
 
 export async function Hash(Data, SaltOrRounds) {
-    const hashed = bcrypt.hash(Data, SaltOrRounds);
+    const hashed = await bcrypt.hash(Data, SaltOrRounds);
     return hashed;
 }
 
-export function ExpressErrorJson(ErrorMessage, resStatus) {
+export function ExpressErrorJson(res, ErrorMessage, resStatus) {
     return res.status(resStatus).json({
         success: false,
         error: ErrorMessage
     });
 }
 
-export function ExpressSuccessJson(Message, resStatus) {
+export function ExpressSuccessJson(res, Message, resStatus) {
     return res.status(resStatus).json({
         success: true,
         message: Message
@@ -50,7 +50,7 @@ export function Send(res, message) {
     res.send(message);
 }
 
-export function Query(sqlConnection, sql, FailErrorMessage, FailResStatus, SuccessMessage, SuccessResStatus, ...SqlParams) {
+export function Query(res, sqlConnection, sql, FailErrorMessage, FailResStatus, SuccessMessage, SuccessResStatus, ...SqlParams) {
     const SQL = sql;
 
     sqlConnection.query(sql, SqlParams, (err, results) => {
@@ -123,7 +123,7 @@ export function CompareSync(Data, encrypted) {
     return bcrypt.compareSync(Data, encrypted);
 }
 
-export function Compare(Data, encrypted) {
+export async function Compare(Data, encrypted) {
     const result = await bcrypt.compare(Data, encrypted);
     
     return result;
