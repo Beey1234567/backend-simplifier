@@ -17,3 +17,5 @@ types.d.ts rework
 ## 2.1.0
 
 now you can pass res as null in Query function
+
+types.d.ts changes
