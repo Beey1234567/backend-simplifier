@@ -56,10 +56,18 @@ export function Query(res, sqlConnection, sql, FailErrorMessage, FailResStatus, 
     sqlConnection.query(sql, SqlParams, (err, results) => {
         
         if (err) {
-            return res.status(FailResStatus).json({ success: false, error: FailErrorMessage });
+            if (res) {
+                return res.status(FailResStatus).json({ success: false, error: FailErrorMessage });
+            } else {
+                console.error(FailErrorMessage);
+            }
         }
-
-        res.status(SuccessResStatus).json({ success: true, message: SuccessMessage, newId: results.insertId });
+        
+        if (res) {
+            res.status(SuccessResStatus).json({ success: true, message: SuccessMessage, newId: results.insertId });
+        } else {
+            console.log(SuccessMessage);
+        }
     });
 }
 
