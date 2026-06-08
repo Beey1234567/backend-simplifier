@@ -18,14 +18,12 @@
     "types": "./types.d.ts",
     "exports": {
         ".": {
-            "types": "./index.d.ts",
-            "import": "./index.js",
-            "main": "./index.js"
+            "types": "./types.d.ts",
+            "import": "./index.js"
         },
         "./async": {
             "types": "./async-features.d.ts",
-            "import": "./async-features.js",
-            "main": "./index.js"
+            "import": "./async-features.js"
         }
     },
     "peerDependencies": {
@@ -33,6 +31,9 @@
         "mysql2": ">=3.0.0",
         "bcrypt": ">=6.0.0",
         "cors": ">=2.0.0"
+    },
+    "engines": {
+        "node": ">=22.0.0"
     },
     "repository": "https://github.com/Beey1234567/backend-simplifier",
     "type": "module",
