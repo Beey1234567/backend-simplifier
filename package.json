@@ -19,7 +19,8 @@
     "exports": {
         ".": {
             "types": "./types.d.ts",
-            "import": "./index.js"
+            "import": "./index.js",
+            "require": "./index.js"
         },
         "./async": {
             "types": "./async-features.d.ts",
