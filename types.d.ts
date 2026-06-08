@@ -31,7 +31,7 @@ export interface PackageWrapper {
     /**
      * Uses request's built-in send to send a message to the HTML.
      */
-    Send(res: Response, message: string | Buffer | Object | Array)
+    Send(res: Response, message: string | Buffer | Object | Array): void
     /**
      * Querys your database to run SQL
      * SqlParams - the Parameters for your SQL table or database
@@ -44,23 +44,23 @@ export interface PackageWrapper {
     /**
      * Makes the server listen for a GET request with a specified name
      */
-    Get(App: Express, name: string, SuccessFunc: (req: Request, res: Response) => void | Promise<any>, ErrorFunc: (err: any, req: Request, res: Response) => void | Promise<any>)
+    Get(App: Express, name: string, SuccessFunc: (req: Request, res: Response) => void | Promise<any>, ErrorFunc: (err: any, req: Request, res: Response) => void | Promise<any>): void
     /**
      * Makes the server listen for a POST request with a specified name
      */
-    Post(App: Express, name: string, SuccessFunc: (req: Request, res: Response) => void | Promise<any>, ErrorFunc: (err: any, req: Request, res: Response) => void | Promise<any>)
+    Post(App: Express, name: string, SuccessFunc: (req: Request, res: Response) => void | Promise<any>, ErrorFunc: (err: any, req: Request, res: Response) => void | Promise<any>): void
     /**
      * Makes the server listen for a PATCH request with a specified name
      */
-    Patch(App: Express, name: string, SuccessFunc: (req: Request, res: Response) => void | Promise<any>, ErrorFunc: (err: any, req: Request, res: Response) => void | Promise<any>)
+    Patch(App: Express, name: string, SuccessFunc: (req: Request, res: Response) => void | Promise<any>, ErrorFunc: (err: any, req: Request, res: Response) => void | Promise<any>): void
     /**
      * Makes the server listen for a PUT request with a specified name
      */
-    Put(App: Express, name: string, SuccessFunc: (req: Request, res: Response) => void | Promise<any>, ErrorFunc: (err: any, req: Request, res: Response) => void | Promise<any>)
+    Put(App: Express, name: string, SuccessFunc: (req: Request, res: Response) => void | Promise<any>, ErrorFunc: (err: any, req: Request, res: Response) => void | Promise<any>): void
     /**
      * Makes the server listen for a DELETE request with a specified name
      */
-    Delete(App: Express, name: string, SuccessFunc: (req: Request, res: Response) => void | Promise<any>, ErrorFunc: (err: any, req: Request, res: Response) => void | Promise<any>)
+    Delete(App: Express, name: string, SuccessFunc: (req: Request, res: Response) => void | Promise<any>, ErrorFunc: (err: any, req: Request, res: Response) => void | Promise<any>): void
     /**
      * Uses bcrypt's compare synchronously
      */
