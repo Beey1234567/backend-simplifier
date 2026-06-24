@@ -50,3 +50,11 @@ Added more functions:
 - GetRounds
 
 README.MD grammar update
+
+## 3.1.0
+
+Added @types/node to package.
+
+Added package-lock.json.
+
+SqlPool now returns something.
