@@ -73,6 +73,18 @@ export interface PackageWrapper {
      * Uses bcrypt's compare
      */
     Compare(Data: string | Buffer, encrypted: string): Promise<boolean>
+    /**
+     * Uses bcrypt's genSalt
+     */
+    GenSalt(Rounds?: number | undefined, Minor?: "a" | "b" | undefined): Promise<string>
+    /** 
+     * Uses bcrypt's genSalt synchronously
+    */
+   GenSaltSync(Rounds?: number | undefined, Minor?: "a" | "b" | undefined): string
+   /**
+    * Uses bcrypt's getRounds
+    */
+   GetRounds(encrypted: string): number
 }
 
 declare module "backend-simplifier" {

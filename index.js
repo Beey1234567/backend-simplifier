@@ -146,3 +146,21 @@ export async function Compare(Data, encrypted) {
     
     return result;
 }
+
+export async function GenSalt(Rounds = 10, minor = undefined) {
+    const result = await bcrypt.genSalt(Rounds, minor);
+
+    return result;
+}
+
+export function GenSaltSync(Rounds = undefined, minor = undefined) {
+    const result = bcrypt.genSaltSync(Rounds, minor)
+
+    return result;
+}
+
+export function GetRounds(encrypted) {
+    const result = bcrypt.getRounds(encrypted);
+
+    return result;
+}
