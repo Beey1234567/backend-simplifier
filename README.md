@@ -13,11 +13,11 @@ This package requires the following to be used:
 
 You must also have a node version of 22.0.0 or higher for CJS support.
 
-The package can't be used without these packages
+The package can't be used without these packages.
 
 ## Importing
 
-This package has types.d.ts and you can import all functions with: `import "backend-simplifier"`
+This package has types.d.ts and you can import all functions with: `import "backend-simplifier"`.
 
 ## Links
 
