@@ -28,10 +28,10 @@
         }
     },
     "peerDependencies": {
-        "express": ">=5.0.0",
-        "mysql2": ">=3.0.0",
         "bcrypt": ">=6.0.0",
-        "cors": ">=2.0.0"
+        "cors": ">=2.0.0",
+        "express": ">=5.0.0",
+        "mysql2": ">=3.0.0"
     },
     "engines": {
         "node": ">=22.0.0"
@@ -39,5 +39,8 @@
     "repository": "https://github.com/Beey1234567/backend-simplifier",
     "type": "module",
     "author": "beey12345",
-    "license": "MIT"
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^26.0.0"
+    }
 }
