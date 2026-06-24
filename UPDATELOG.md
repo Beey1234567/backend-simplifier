@@ -39,3 +39,14 @@ reworked package.json with minor updates
 Fixed yet another CJS importing bug regarding package.json
 
 Fixed an UPDATELOG.md markdown error
+
+## 3.0.0
+
+Added more functions:
+
+- SqlPool
+- GenSalt
+- GenSaltSync
+- GetRounds
+
+README.MD grammar update
