@@ -6,7 +6,7 @@ export interface PackageWrapper {
     /**
      * Creates an SQL pool that is synchronized.
      */
-    SqlPool(Host: string, User: string, Password: string, Database: string, Port: number);
+    SqlPool(Host: string, User: string, Password: string, Database: string, Port: number): Stream.Duplex | null | undefined
     /**
      * Allows express to use json.
      */
