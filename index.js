@@ -15,6 +15,16 @@ export function SqlConnection(Host, User, Password, Database, Port) {
     return Connection;
 }
 
+export function SqlPool(Host, User, Password, Database, Port) {
+    const Connection = mysql.createPool({
+        host: Host,
+        user: User,
+        password: Password,
+        database: Database,
+        port: Port
+    })
+}
+
 export function UseJson(App) {
     App.use(express.json());
 }
