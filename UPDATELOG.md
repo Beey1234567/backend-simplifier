@@ -58,3 +58,11 @@ Added @types/node to package.
 Added package-lock.json.
 
 SqlPool now returns something.
+
+## Version 3.1.1
+
+Tried to fix bug
+
+## Version 3.1.2
+
+Officially fixed the bug with Query().
