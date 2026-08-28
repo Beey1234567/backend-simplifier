@@ -65,7 +65,7 @@ export function Send(res, message) {
 export function Query(res, sqlConnection, sql, FailErrorMessage, FailResStatus, SuccessMessage, SuccessResStatus, ...SqlParams) {
     const SQL = sql;
 
-    const finalParams = qlParams.length > 0 ? SqlParams : undefined;
+    const finalParams = SqlParams.length > 0 ? SqlParams : undefined;
 
     sqlConnection.query(sql, finalParams, (err, results) => {
         
