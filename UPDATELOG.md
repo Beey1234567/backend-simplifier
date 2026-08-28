@@ -66,3 +66,7 @@ Tried to fix bug
 ## Version 3.1.2
 
 Officially fixed the bug with Query().
+
+## Version 3.1.3
+
+Fixed typo
